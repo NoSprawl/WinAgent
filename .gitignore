@@ -1,0 +1,7 @@
+*.txt
+*.htm
+NoSMonitor/obj/
+NoSAgent/bin/
+NoSAgent/obj/
+TestHarness/obj/
+TestHarness/bin/

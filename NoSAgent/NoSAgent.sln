@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30723.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NoSAgent", "NoSAgent.csproj", "{53CDD4A7-5512-4983-B04C-F1AFD7EA2402}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NoSMonitor", "..\NoSMonitor\NoSMonitor.csproj", "{33D946F4-D4EA-4350-89AD-A375F7B5D1EC}"
+EndProject
+Project("{6141683F-8A12-4E36-9623-2EB02B2C2303}") = "NoSAgentSetup", "..\Setup\NoSAgentSetup\NoSAgentSetup.isproj", "{E238C667-77AB-4DB9-ABF9-87F0F02A80D9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		CD_ROM|Any CPU = CD_ROM|Any CPU
+		Debug|Any CPU = Debug|Any CPU
+		DVD-5|Any CPU = DVD-5|Any CPU
+		Release|Any CPU = Release|Any CPU
+		SingleImage|Any CPU = SingleImage|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{53CDD4A7-5512-4983-B04C-F1AFD7EA2402}.CD_ROM|Any CPU.ActiveCfg = Release|Any CPU
+		{53CDD4A7-5512-4983-B04C-F1AFD7EA2402}.CD_ROM|Any CPU.Build.0 = Release|Any CPU
+		{53CDD4A7-5512-4983-B04C-F1AFD7EA2402}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{53CDD4A7-5512-4983-B04C-F1AFD7EA2402}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{53CDD4A7-5512-4983-B04C-F1AFD7EA2402}.DVD-5|Any CPU.ActiveCfg = Debug|Any CPU
+		{53CDD4A7-5512-4983-B04C-F1AFD7EA2402}.DVD-5|Any CPU.Build.0 = Debug|Any CPU
+		{53CDD4A7-5512-4983-B04C-F1AFD7EA2402}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{53CDD4A7-5512-4983-B04C-F1AFD7EA2402}.Release|Any CPU.Build.0 = Release|Any CPU
+		{53CDD4A7-5512-4983-B04C-F1AFD7EA2402}.SingleImage|Any CPU.ActiveCfg = Release|Any CPU
+		{53CDD4A7-5512-4983-B04C-F1AFD7EA2402}.SingleImage|Any CPU.Build.0 = Release|Any CPU
+		{33D946F4-D4EA-4350-89AD-A375F7B5D1EC}.CD_ROM|Any CPU.ActiveCfg = Release|Any CPU
+		{33D946F4-D4EA-4350-89AD-A375F7B5D1EC}.CD_ROM|Any CPU.Build.0 = Release|Any CPU
+		{33D946F4-D4EA-4350-89AD-A375F7B5D1EC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{33D946F4-D4EA-4350-89AD-A375F7B5D1EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{33D946F4-D4EA-4350-89AD-A375F7B5D1EC}.DVD-5|Any CPU.ActiveCfg = Debug|Any CPU
+		{33D946F4-D4EA-4350-89AD-A375F7B5D1EC}.DVD-5|Any CPU.Build.0 = Debug|Any CPU
+		{33D946F4-D4EA-4350-89AD-A375F7B5D1EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{33D946F4-D4EA-4350-89AD-A375F7B5D1EC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{33D946F4-D4EA-4350-89AD-A375F7B5D1EC}.SingleImage|Any CPU.ActiveCfg = Release|Any CPU
+		{33D946F4-D4EA-4350-89AD-A375F7B5D1EC}.SingleImage|Any CPU.Build.0 = Release|Any CPU
+		{E238C667-77AB-4DB9-ABF9-87F0F02A80D9}.CD_ROM|Any CPU.ActiveCfg = CD_ROM
+		{E238C667-77AB-4DB9-ABF9-87F0F02A80D9}.CD_ROM|Any CPU.Build.0 = CD_ROM
+		{E238C667-77AB-4DB9-ABF9-87F0F02A80D9}.Debug|Any CPU.ActiveCfg = DVD-5
+		{E238C667-77AB-4DB9-ABF9-87F0F02A80D9}.Debug|Any CPU.Build.0 = DVD-5
+		{E238C667-77AB-4DB9-ABF9-87F0F02A80D9}.DVD-5|Any CPU.ActiveCfg = DVD-5
+		{E238C667-77AB-4DB9-ABF9-87F0F02A80D9}.DVD-5|Any CPU.Build.0 = DVD-5
+		{E238C667-77AB-4DB9-ABF9-87F0F02A80D9}.Release|Any CPU.ActiveCfg = SingleImage
+		{E238C667-77AB-4DB9-ABF9-87F0F02A80D9}.Release|Any CPU.Build.0 = SingleImage
+		{E238C667-77AB-4DB9-ABF9-87F0F02A80D9}.SingleImage|Any CPU.ActiveCfg = SingleImage
+		{E238C667-77AB-4DB9-ABF9-87F0F02A80D9}.SingleImage|Any CPU.Build.0 = SingleImage
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
