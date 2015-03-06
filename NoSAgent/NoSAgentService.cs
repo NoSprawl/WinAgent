@@ -33,8 +33,6 @@ namespace NoSAgent
                     serviceHost.Close();
                 }
 
-                // Create a ServiceHost for the CalculatorService type and 
-                // provide the base address.
                 serviceHost = new ServiceHost(typeof(AgentService));
 
                 // Open the ServiceHostBase to create listeners and start 

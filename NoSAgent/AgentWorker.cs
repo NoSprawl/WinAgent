@@ -61,6 +61,12 @@ namespace NoSAgent
             {
                 // Get the profile and applications
                 Profile profile = new Profile();
+
+                InstalledApplications ias = new InstalledApplications();
+                List<InstalledApplication> apps = ias.GetInstalledApplications();
+                profile.Data.Messages.Packages = apps;
+                profile.MacAddresses = Global.GetMacAddresses();
+
                 string json = JsonConvert.SerializeObject(profile);
 
                 AWSSQS sqs = new AWSSQS();

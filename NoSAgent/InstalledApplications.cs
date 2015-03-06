@@ -38,6 +38,7 @@ namespace NoSAgent
                                 app.Name = appKey.GetValue("DisplayName").ToString();
                                 app.Version = appKey.GetValue("DisplayVersion").ToString();
                                 app.Publisher = appKey.GetValue("Publisher").ToString();
+                                app.LatestVersion = "unknown";
                                 installedApps.Add(app);
                             }
                             catch (Exception ex)
@@ -58,17 +59,20 @@ namespace NoSAgent
         [JsonProperty("name")]
         public string Name { get; set; }
 
-        [JsonProperty("version")]
+        [JsonProperty("installed_version")]
         public string Version { get; set; }
 
-        [JsonProperty("publisher")]
+        [JsonProperty("vendor")]
         public string Publisher { get; set; }
 
-        [JsonProperty("service")]
+        [JsonProperty("is_service")]
         public bool IsService { get; set; }
 
-        [JsonProperty("running")]
+        [JsonProperty("is_running")]
         public bool IsRunning { get; set; }
+
+        [JsonProperty("latest_version")]
+        public string LatestVersion { get; set; }
 
     }
 }

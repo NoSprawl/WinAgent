@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Diagnostics;
 using System.Configuration;
+using System.Net.NetworkInformation;
 
 namespace NoSAgent
 {
@@ -74,6 +75,30 @@ namespace NoSAgent
             {
                 Console.WriteLine("Error writing app settings");
             }
+        }
+
+        public static List<string> GetMacAddresses()
+        {
+            List<string> retVal = new List<string>();
+
+            try
+            {
+                retVal =
+                    (
+                        from nic in NetworkInterface.GetAllNetworkInterfaces()
+                        where nic.OperationalStatus == OperationalStatus.Up
+                        select nic.GetPhysicalAddress().ToString()
+                    ).ToList();
+            }
+            catch(Exception ex)
+            {
+                WriteToEventLog("Cannot get mac addresses: " + ex.Message, true);
+            }
+
+            // Remove empties
+            retVal.RemoveAll(nic => nic == string.Empty);
+
+            return retVal;
         }
 
         public static void WriteToEventLog(string message, bool isError)

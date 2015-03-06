@@ -10,43 +10,40 @@ namespace NoSAgent
 {
     public class Profile
     {
-        [JsonProperty("customer_id")]
-        public string CustomerID
+
+        public Profile()
+        {
+            this.MacAddresses = new List<string>();
+            this.Data = new Data();
+            this.Data.Messages = new Messages();
+        }
+
+        [JsonProperty("job")]
+        public string Job
         {
             get
             {
-                Settings settings = Global.GetSettings();
-                return settings.CustomerId;
+                return "ProcessAgentReport";
             }
         }
 
-        [JsonProperty("hostname")]
-        public string HostName
-        {
-            get
-            {
-                return System.Environment.MachineName;
-            }
-        }
 
-        [JsonProperty("last_update")]
-        public DateTime LastUpdate
-        {
-            get
-            {
-                return DateTime.Now;
-            }
-        }
+        [JsonProperty("network")]
+        public List<string> MacAddresses { get; set; }
 
-        [JsonProperty("installed")]
-        public List<InstalledApplication> InstalledApplications
-        {
-            get
-            {
-                InstalledApplications ias = new InstalledApplications();
-                List<InstalledApplication> apps = ias.GetInstalledApplications();
-                return apps;
-            }
-        }
+        [JsonProperty("data")]
+        public Data Data { get; set; }
+    }
+
+    public class Data
+    {
+        [JsonProperty("message")]
+        public Messages Messages { get; set; }
+    }
+
+    public class Messages
+    {
+        [JsonProperty("packages")]
+        public List<InstalledApplication> Packages { get; set; }
     }
 }
