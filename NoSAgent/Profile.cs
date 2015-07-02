@@ -13,7 +13,7 @@ namespace NoSAgent
 
         public Profile()
         {
-            this.MacAddresses = new List<string>();
+            //this.MacAddresses = new List<string>();
             this.Data = new Data();
             this.Data.Messages = new Messages();
         }
@@ -28,8 +28,8 @@ namespace NoSAgent
         }
 
 
-        [JsonProperty("network")]
-        public List<string> MacAddresses { get; set; }
+        //[JsonProperty("network")]
+        //public List<string> MacAddresses { get; set; }
 
         [JsonProperty("data")]
         public Data Data { get; set; }
@@ -43,7 +43,10 @@ namespace NoSAgent
 
     public class Messages
     {
-        [JsonProperty("packages")]
+        [JsonProperty("ips")]
+        public List<string> Ips { get; set; }
+
+        [JsonProperty("pkginfo")]
         public List<InstalledApplication> Packages { get; set; }
     }
 }

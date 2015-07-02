@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Diagnostics;
 using System.Configuration;
 using System.Net.NetworkInformation;
+using System.Net;
 
 namespace NoSAgent
 {
@@ -75,6 +76,23 @@ namespace NoSAgent
             {
                 Console.WriteLine("Error writing app settings");
             }
+        }
+
+        public static List<string> GetIPs()
+        {
+            List<string> ips = new List<string>();
+
+            IPHostEntry host;
+            string localIP = "?";
+            host = Dns.GetHostEntry(Dns.GetHostName());
+            foreach (IPAddress ip in host.AddressList)
+            {
+                if (ip.AddressFamily == System.Net.Sockets.AddressFamily.InterNetwork)
+                {
+                    ips.Add(ip.ToString());
+                }
+            }
+            return ips;
         }
 
         public static List<string> GetMacAddresses()

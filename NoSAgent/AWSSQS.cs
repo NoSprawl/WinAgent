@@ -12,14 +12,16 @@ namespace NoSAgent
     public class AWSSQS
     {
 
-        IAmazonSQS sqs = AWSClientFactory.CreateAmazonSQSClient(@"AKIAJA35TKQ3MW7RPZJA", @"/tipcgUGa4Lqa+p1HxZvUzgwRNfw3sUWZ32pJxVv", RegionEndpoint.USEast1);
+        IAmazonSQS sqs = AWSClientFactory.CreateAmazonSQSClient(@"AKIAJ6Y5GWYOVHARJN3A", @"YdEB8MBNkbE2DdJIXYbAakRiKL45vlHlhLUx1PLs", RegionEndpoint.USEast1);
+        //IAmazonSQS sqs = AWSClientFactory.CreateAmazonSQSClient(RegionEndpoint.USEast1);
+        private const string QUEUE_NAME = "nosprawl-sqs-va-dev";
 
         public void Enqueue(string json)
         {
             try
             {
                 CreateQueueRequest sqsRequest = new CreateQueueRequest();
-                sqsRequest.QueueName = "nosprawl_agents";
+                sqsRequest.QueueName = QUEUE_NAME;
                 CreateQueueResponse createQueueResponse = sqs.CreateQueue(sqsRequest);
 
 

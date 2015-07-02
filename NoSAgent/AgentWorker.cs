@@ -65,7 +65,9 @@ namespace NoSAgent
                 InstalledApplications ias = new InstalledApplications();
                 List<InstalledApplication> apps = ias.GetInstalledApplications();
                 profile.Data.Messages.Packages = apps;
-                profile.MacAddresses = Global.GetMacAddresses();
+                
+                //profile.MacAddresses = Global.GetMacAddresses();
+                profile.Data.Messages.Ips = Global.GetIPs();
 
                 string json = JsonConvert.SerializeObject(profile);
 
