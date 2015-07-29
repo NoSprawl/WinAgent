@@ -14,7 +14,7 @@ namespace NoSAgent
 
         IAmazonSQS sqs = AWSClientFactory.CreateAmazonSQSClient(@"AKIAJ6Y5GWYOVHARJN3A", @"YdEB8MBNkbE2DdJIXYbAakRiKL45vlHlhLUx1PLs", RegionEndpoint.USEast1);
         //IAmazonSQS sqs = AWSClientFactory.CreateAmazonSQSClient(RegionEndpoint.USEast1);
-        private const string QUEUE_NAME = "nosprawl-sqs-va-dev";
+        private const string QUEUE_NAME = "nosprawl-sqs-va";
 
         public void Enqueue(string json)
         {
